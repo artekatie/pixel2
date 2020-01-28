@@ -1,0 +1,461 @@
+/*==========================================
+Project: Pixel 2
+Author: Kate Prasolek
+Contact: kate.prasolek@gmail.com
+==========================================*/
+
+/*
+===================================================
+GENERAL SETTINGS
+===================================================*/
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  height: 100%;
+  font-family: "Arial";
+}
+
+.page-container {
+  position: relative;
+  /*max-width: 1100px;*/
+  margin: 0 auto;
+}
+
+section, footer {
+  display: inline-flex;
+}
+
+#block1, #block3, #block6, #block9 {
+  background-color: #f6f6f6;
+}
+
+#block2, #block5, #block7 {
+  background-color: #ffffff;
+}
+
+#block4 {
+  background-image: url("/images/img_block4_bg.jpg");
+  background-color: #ffffff;
+  background-size: cover;
+  border-bottom: 1px solid #888b8d;
+}
+
+.img-block1, .text-block2, .img-block3, .text-block4, .img-block5, .text-block6, .img-block7, .text-block9  {
+  float: left;
+}
+
+.text-block1, .img-block2, .text-block3, .img-block4, .text-block5, .img-block6, .text-block7, .img-block9 {
+  float: right;
+}
+
+.text-block1, .text-block2, .text-block3, .text-block4, .text-block5, .text-block6, .text-block7, .text-block9 {
+  padding-left: 4em;
+}
+
+.img-block1, .img-block2, .img-block3, .img-block4, .img-block5, .img-block6, .img-block7, .img-block9, .text-block1, .text-block2, .text-block3, .text-block5, .text-block6, .text-block7, .text-block9 {
+  max-width: 50%;
+  height: auto;
+  margin: auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: -0.25em;
+}
+
+/*
+===================================================
+HEADER WITH LOGO AND NAVIGATION
+===================================================*/
+header {
+  border-bottom: 1px solid #d2d2d2;
+  height: 10vh;
+  background-color: #ffffff;
+  margin-top: -1em;
+}
+
+#logo-holder {
+  max-width: 20%;
+}
+
+.logo {
+  float: left;
+  max-width: 12%;
+  position: absolute;
+  padding: 1em;
+}
+
+nav {
+  max-width: 80%;
+  float: right;
+  line-height: 2.875;
+  margin-right: 4em;
+}
+
+nav li {
+  display: inline-block;
+  font-size: 1em;
+  text-decoration: none;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav li a {
+  color: #888b8d;
+}
+
+nav li a:hover, nav li a:focus {
+  color: #4688f1;
+}
+
+/*
+===================================================
+HERO BANNER
+===================================================*/
+#hero-banner {
+  background-color: #ffffff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+.button-group {
+  position: absolute;
+  top: 9%;
+  left: 7%;
+}
+
+.button-group:before {
+  content: ' ';
+  display: block;
+}
+
+.button-group a {
+  cursor: pointer; 
+  float: left; 
+  border: none;
+}
+
+/* Clear floats (clearfix hack) */
+.butto-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.link:hover {
+  color: #3aa756;
+}
+
+.button-hero:hover, .button-block7:hover {
+  background-color: #3aa756;
+}
+
+.link {
+  color: #4688f1;
+  font-size: 1em;
+  line-height: 1.2;
+  padding: 0.675em 1.25em;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.button-block7, .button-hero {
+  background-color: #4688f1;
+  color: #ffffff;
+  text-align: center;
+  font-size: 1em;
+  line-height: 1.2;
+  padding: 0.5em 1.25em;
+  border-radius: 5px;
+}
+
+/*
+===================================================
+TYPOGRAPHY AND TEXT STYLING
+===================================================*/
+h1 {
+  font-size: 2em;
+}
+
+.text {
+  font-size: 1.5em;
+}
+
+.text, h1, footer {
+  color: #888b8d;
+}
+
+.text-black {
+  color: #212121;
+  font-size: 1.5em;
+}
+
+h1.black {
+  color: #212121;
+  font-size: 2em;
+}
+
+.text, h1, .text-black, h1.black {
+  max-width: 83.33%;
+}
+
+.text-block1, .text-block2, .text-block3, .text-block4, .text-block5,  .text-block6, .text-block7, .text-block9 {
+  line-height: 1.222;
+}
+
+.text-block4 {
+  margin-top: 7em;
+}
+
+/*
+===================================================
+FOOTER
+===================================================*/
+footer {
+  font-size: 0.875em;
+  background-color: #e3e3e3;
+  line-height: 1.5;
+  padding: 1em;
+}
+
+/*
+===================================================
+MEDIA QUERIES
+===================================================*/
+@media only screen and (max-width: 1100px) {
+  ul {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before:0.5em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+  }
+  .text, .text-black {
+    font-size: 1.25em;
+  }
+  h1, h1.black {
+    font-size: 1.668em;
+  }
+  footer {
+    font-size: 0.75em;
+  }
+  #mobile-block3, #mobile-block5, #mobile-block2, #mobile-block6, #mobile-block9 {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1030px) {
+  .button-block7, .button-hero, .link {
+    font-size: 1.25em;
+  }
+  #mobile-block3, #mobile-block5, #mobile-block2, #mobile-block6, #mobile-block9 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 920px) {
+  .text, .text-black {
+    font-size: 1.1em;
+  }
+  h1, h1.black {
+    font-size: 1.5em;
+  }
+  footer {
+    font-size: 0.75em;
+  }
+  #mobile-block3, #mobile-block5, #mobile-block2, #mobile-block6, #mobile-block9 {
+    display: none;
+  }
+}
+
+@media only screen and (max-device-width: 872px) {
+  .text, .text-black {
+    font-size: 1em;
+  }
+  h1, h1.black {
+    font-size: 1.35em;
+  }
+  footer {
+    font-size: 0.75em;
+  }
+  .logo {
+    max-width: 15%;
+  }
+  .text-block1, .text-block3, .text-block5 {
+    padding-left: 3rem;
+  }  
+  .text-block4 {
+    margin-top: 5em;
+  }
+  #mobile-block3, #mobile-block5, #mobile-block2, #mobile-block6, #mobile-block9 {
+    display: none;
+  }
+}
+
+@media only screen and (max-device-width: 700px) {
+  .logo {
+    max-width: 18%;
+  }
+  nav li {
+    padding-left: 0;
+  }
+  .button-group {
+    top: 9.5%;
+  }
+  .text, .text-black {
+    font-size: 0.95em;
+  }
+  h1, h1.black {
+    font-size: 1.15em;
+  }
+  footer {
+    font-size: 0.7em;
+  }
+  .text-block4 {
+    margin-top: 4em;
+  }
+  .text-block1, .text-block3 {
+    padding-left: 1.5rem;
+  }  
+  .text-block7, .text-block5 {
+    padding-left: 2.5em;
+  }
+  nav {
+    margin-right: 0;
+  }
+  #mobile-block3, #mobile-block5, #mobile-block2, #mobile-block6, #mobile-block9 {
+    display: none;
+  }
+}
+    
+@media only screen and (max-width: 610px) {
+  .logo {
+    max-width: 20%;
+  }
+  .text, .text-black, nav li, .button-block7, .button-hero, .link {
+    font-size: 0.875em;
+  }
+  h1, h1.black {
+    font-size: 1em;
+  }
+  footer {
+    font-size: 0.7em;
+  }
+  .text-block4 {
+    margin-top: 3em;
+  }
+  #mobile-block3, #mobile-block5, #mobile-block2, #mobile-block6, #mobile-block9 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  #block3, #block5, #block2, #block6, #block9  {
+    display: none;
+  }
+  #mobile-block3, #mobile-block5, #mobile-block2, #mobile-block6, #mobile-block9 {
+    display: block;
+  }
+  .text, .text-black, nav li, .button-block7, .button-hero, .link {
+    font-size: 0.875em;
+  }
+  h1, h1.black {
+    font-size: 1em;
+    margin: 0;
+    padding: 0
+  }
+  footer {
+    font-size: 0.7em;
+  }
+  .text-block4 {
+    margin-top: 0;
+  }
+  .button-group {
+    top: 5%;
+  }
+  section {
+    display: block;
+  }
+  .img-block1, .img-mobile-block2, .img-mobile-block3, .img-block4, .img-mobile-block5, .img-mobile-block6, .img-block7, .img-mobile-block9 {
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    float: none;
+  }
+  .text-block1, .text-mobile-block2, .text-mobile-block3, .text-block4, .text-mobile-block5, .text-mobile-block6, .text-block7, .text-mobile-block9 {
+    padding-left: 3em;
+    padding-right: 3em;
+    max-width: 100%;
+    float: none;
+  }
+  .text-block1, .text-mobile-block6, .text-mobile-block9 {
+    padding-bottom: 1em;
+  }
+  .text-block7 {
+    padding-bottom: 2em;
+  }
+  .text-mobile-block2, .text-mobile-block3, .text-block4, .text-mobile-block5, .text-block7 {
+    padding-top: 2em;
+  }
+  .text, h1, .text-black, h1.black {
+    max-width: 100%;
+  }
+  #block4 {
+    background-image: url("/images/img_block4_bg.jpg");
+    background-color: #ffffff;
+    background-size: cover;
+    border-bottom: 1px solid #888b8d;
+  }
+  #mobile-block3, #mobile-block6, #mobile-block9 {
+    background-color: #f6f6f6;
+  }
+  #logo-holder {
+    display: none;
+  }
+  nav {
+    max-width: 100%;
+    float: none;
+    line-height: 2;
+    margin-right: 0;
+    padding: 1em;
+    text-align: center;
+  }
+  nav li {
+    display: inline-block;
+    text-decoration: none;
+  }
+  header {
+    height: 14vh;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .button-group {
+    top: 4.75%;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .button-group {
+    top: 4.5%;
+  }
+}
+
+
+
